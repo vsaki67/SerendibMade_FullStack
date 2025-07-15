@@ -51,73 +51,79 @@
 
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="text-2xl font-bold text-primary">SerendibMade</div>
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <!-- Logo - Updated to match second navbar -->
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
+                    </svg>
                 </div>
+                <div class="text-2xl font-bold text-primary">SerendibMade</div>
+            </div>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Home</a>
-                    
-                    <!-- Products Dropdown -->
-                    <div class="relative dropdown">
-                        <button class="text-gray-700 hover:text-primary transition flex items-center">
-                            Products <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Traditional Art</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Batik</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Spices</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tea</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Masks</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Gems</a>
-                        </div>
-                    </div>
-
-                    <a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Artisan</a>
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Contact Us</a>
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Gift</a>
-                    
-                    <!-- Language Button -->
-                    <div class="relative dropdown">
-                        <button class="text-gray-700 hover:text-primary transition flex items-center">
-                            <span id="currentLang">EN</span> <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-menu absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg py-1 hidden">
-                            <button onclick="changeLang('EN')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</button>
-                            <button onclick="changeLang('JP')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">日本語</button>
-                        </div>
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#" class="text-gray-700 hover:text-primary transition">Home</a>
+                
+                <!-- Products Dropdown -->
+                <div class="relative dropdown">
+                    <button class="text-gray-700 hover:text-primary transition flex items-center dropdown-btn">
+                        Products <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Traditional Art</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Batik</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Spices</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tea</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Masks</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Gems</a>
                     </div>
                 </div>
 
-                <!-- Icons -->
-                <div class="flex items-center space-x-4">
-                    <button class="text-gray-700 hover:text-primary transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path></svg>
+                <a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition">Artisan</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition">Contact Us</a>
+                <a href="#" class="text-gray-700 hover:text-primary transition">Gift</a>
+                
+                <!-- Language Button -->
+                <div class="relative dropdown">
+                    <button class="text-gray-700 hover:text-primary transition flex items-center dropdown-btn">
+                        <span id="currentLang">EN</span> <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
                     </button>
-                    <button class="text-gray-700 hover:text-primary transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    </button>
-                    <button class="text-gray-700 hover:text-primary transition relative">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                        <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
-                    </button>
-                    <button class="text-gray-700 hover:text-primary transition relative">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293A1 1 0 0 0 5.414 17H19M7 13v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4m-8 6h8"></path></svg>
-                        <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
-                    </button>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
+                    <div class="dropdown-menu absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg py-1 hidden">
+                        <button onclick="changeLang('EN')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</button>
+                        <button onclick="changeLang('JP')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">日本語</button>
+                    </div>
                 </div>
             </div>
 
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-700 hover:text-primary transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path></svg>
+                </button>
+                <button class="text-gray-700 hover:text-primary transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                </button>
+                <button class="text-gray-700 hover:text-primary transition relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    <!--<span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>-->
+                </button>
+                <button class="text-gray-700 hover:text-primary transition relative">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293A1 1 0 0 0 5.414 17H19M7 13v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4m-8 6h8"></path></svg>
+                    <!--<span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>-->
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700" id="mobileMenuButton">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="lg:hidden hidden border-t">
                 <div class="py-4 space-y-4">
@@ -141,8 +147,66 @@
                     <a href="#" class="block text-gray-700 hover:text-primary">Gift</a>
                 </div>
             </div>
-        </div>
-    </nav>
+    </div>
+</nav>
+
+<script>
+    // Dropdown functionality for desktop
+    document.addEventListener('DOMContentLoaded', function() {
+        // Desktop dropdowns
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+        
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const dropdown = this.closest('.dropdown');
+                const menu = dropdown.querySelector('.dropdown-menu');
+                
+                // Close all other dropdowns first
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    if (m !== menu) m.classList.add('hidden');
+                });
+                
+                // Toggle current dropdown
+                menu.classList.toggle('hidden');
+            });
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.add('hidden');
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Mobile dropdown toggle
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+        
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const menu = document.getElementById('mobileProductsMenu');
+                menu.classList.toggle('hidden');
+            });
+        });
+        
+        // Language change function
+        window.changeLang = function(lang) {
+            document.getElementById('currentLang').textContent = lang;
+            // Close the dropdown
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.add('hidden');
+            });
+        };
+    });
+</script>
 
     <!-- Hero Carousel -->
         <section class="carousel-container h-96 md:h-[500px] relative">
@@ -458,55 +522,55 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('product-carousel');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            const productWidth = document.querySelector('.md\\:w-1\\/3').offsetWidth;
-            let currentIndex = 0;
-            const totalProducts = 9;
-            const visibleProducts = 3;
-            
-            function updateCarousel() {
-                const maxIndex = totalProducts - visibleProducts;
-                if (currentIndex > maxIndex) currentIndex = 0;
-                if (currentIndex < 0) currentIndex = maxIndex;
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const carousel = document.getElementById('product-carousel');
+                const prevBtn = document.getElementById('prev-btn');
+                const nextBtn = document.getElementById('next-btn');
+                const productWidth = document.querySelector('.md\\:w-1\\/3').offsetWidth;
+                let currentIndex = 0;
+                const totalProducts = 9;
+                const visibleProducts = 3;
                 
-                const offset = -currentIndex * productWidth;
-                carousel.style.transform = `translateX(${offset}px)`;
-            }
-            
-            nextBtn.addEventListener('click', function() {
-                currentIndex++;
-                if (currentIndex > totalProducts - visibleProducts) {
-                    currentIndex = 0;
+                function updateCarousel() {
+                    const maxIndex = totalProducts - visibleProducts;
+                    if (currentIndex > maxIndex) currentIndex = 0;
+                    if (currentIndex < 0) currentIndex = maxIndex;
+                    
+                    const offset = -currentIndex * productWidth;
+                    carousel.style.transform = `translateX(${offset}px)`;
                 }
+                
+                nextBtn.addEventListener('click', function() {
+                    currentIndex++;
+                    if (currentIndex > totalProducts - visibleProducts) {
+                        currentIndex = 0;
+                    }
+                    updateCarousel();
+                });
+                
+                prevBtn.addEventListener('click', function() {
+                    currentIndex--;
+                    if (currentIndex < 0) {
+                        currentIndex = totalProducts - visibleProducts;
+                    }
+                    updateCarousel();
+                });
+                
+                // Auto-rotate every 5 seconds
+                setInterval(function() {
+                    currentIndex++;
+                    if (currentIndex > totalProducts - visibleProducts) {
+                        currentIndex = 0;
+                    }
+                    updateCarousel();
+                }, 5000);
+                
+                // Initialize
                 updateCarousel();
             });
-            
-            prevBtn.addEventListener('click', function() {
-                currentIndex--;
-                if (currentIndex < 0) {
-                    currentIndex = totalProducts - visibleProducts;
-                }
-                updateCarousel();
-            });
-            
-            // Auto-rotate every 5 seconds
-            setInterval(function() {
-                currentIndex++;
-                if (currentIndex > totalProducts - visibleProducts) {
-                    currentIndex = 0;
-                }
-                updateCarousel();
-            }, 5000);
-            
-            // Initialize
-            updateCarousel();
-        });
-    </script>
-</section>
+        </script>
+    </section>
 
         <!-- Explore Sri Lanka -->
         <section class="py-16 bg-white relative overflow-hidden">

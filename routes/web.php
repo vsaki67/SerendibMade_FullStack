@@ -12,6 +12,9 @@ Route::get('/index', function () {
 Route::get('/loginpg', function () {
     return view('loginpg');
 });
+Route::get('/productpage', function () {
+    return view('productpage');
+});
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
