@@ -23,212 +23,391 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo - Updated to match second navbar -->
-                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
-                        </svg>
+    <!-- Navigation -->
+        <nav class="bg-white shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <!--<div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="text-2xl font-bold text-primary">SerendibMade</div>
+                    </div>-->
+                    <!-- Logo - Updated with image -->
+                    <div class="flex items-center space-x-2">
+                        <a href="/" class="flex items-center">
+                            <img 
+                                src="{{ asset('Images_used/homepage_images/SERENDIB-Made.png') }}" 
+                                alt="SerendibMade Logo"
+                                class="h-10 w-auto mr-2"
+                            >
+                            <div class="text-2xl font-bold">
+                                <span style="font-family: 'Cinzel Decorative', serif; color: #004d40">Serendib</span>
+                                <span style="font-family: 'Raleway', sans-serif; color: #7b8b8e">MADE</span>
+                            </div>
+                        </a>
                     </div>
-                    <div class="text-2xl font-bold text-primary">SerendibMade</div>
-                </div>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Home</a>
-                    
-                    <!-- Products Dropdown -->
-                    <div class="relative dropdown">
-                        <button class="text-gray-700 hover:text-primary transition flex items-center">
-                            Products <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Traditional Art</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Batik</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Spices</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tea</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Masks</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Gems</a>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="#" class="text-gray-700 hover:text-primary transition">Home</a>
+                        
+                        <!-- Products Dropdown -->
+                        <div class="relative dropdown">
+                            <button class="text-gray-700 hover:text-primary transition flex items-center dropdown-btn">
+                                Products <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Traditional Art</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Batik</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Spices</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tea</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Masks</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Gems</a>
+                            </div>
+                        </div>
+
+                        <a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
+                        <a href="#" class="text-gray-700 hover:text-primary transition">Artisan</a>
+                        <a href="#" class="text-gray-700 hover:text-primary transition">Contact Us</a>
+                        <a href="#" class="text-gray-700 hover:text-primary transition">Gift</a>
+                        
+                        <!-- Language Button -->
+                        <div class="relative dropdown">
+                            <button class="text-gray-700 hover:text-primary transition flex items-center dropdown-btn">
+                                <span id="currentLang">EN</span> <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="dropdown-menu absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg py-1 hidden">
+                                <button onclick="changeLang('EN')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</button>
+                                <button onclick="changeLang('JP')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">日本語</button>
+                            </div>
                         </div>
                     </div>
 
-                    <a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Artisan</a>
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Contact Us</a>
-                    <a href="#" class="text-gray-700 hover:text-primary transition">Gift</a>
-                    
-                    <!-- Language Button -->
-                    <div class="relative dropdown">
-                        <button class="text-gray-700 hover:text-primary transition flex items-center">
-                            <span id="currentLang">EN</span> <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
+                    <!-- Icons -->
+                    <div class="flex items-center space-x-4">
+                        <button class="text-gray-700 hover:text-primary transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path></svg>
                         </button>
-                        <div class="dropdown-menu absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg py-1 hidden">
-                            <button onclick="changeLang('EN')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</button>
-                            <button onclick="changeLang('JP')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">日本語</button>
-                        </div>
+                        <button class="text-gray-700 hover:text-primary transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </button>
+                        <button class="text-gray-700 hover:text-primary transition relative">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            <!--<span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>-->
+                        </button>
+                        <button class="text-gray-700 hover:text-primary transition relative">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293A1 1 0 0 0 5.414 17H19M7 13v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4m-8 6h8"></path></svg>
+                            <!--<span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>-->
+                        </button>
+                        
+                        <!-- Mobile Menu Button -->
+                        <button class="lg:hidden text-gray-700" id="mobileMenuButton">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Icons -->
-                <div class="flex items-center space-x-4">
-                    <button class="text-gray-700 hover:text-primary transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path></svg>
-                    </button>
-                    <button class="text-gray-700 hover:text-primary transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    </button>
-                    <button class="text-gray-700 hover:text-primary transition relative">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                        <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
-                    </button>
-                    <button class="text-gray-700 hover:text-primary transition relative">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293A1 1 0 0 0 5.414 17H19M7 13v4a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4m-8 6h8"></path></svg>
-                        <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
-                    </button>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                    </button>
+                
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="lg:hidden hidden border-t">
+                    <div class="py-4 space-y-4">
+                        <a href="#" class="block text-gray-700 hover:text-primary">Home</a>
+                            <div>
+                                <button onclick="toggleProductsMenu()" class="flex items-center justify-between w-full text-gray-700 hover:text-primary">
+                                    Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
+                                </button>
+                                <div id="mobileProductsMenu" class="hidden ml-4 mt-2 space-y-2">
+                                    <a href="#" class="block text-sm text-gray-600">Traditional Art</a>
+                                    <a href="#" class="block text-sm text-gray-600">Batik</a>
+                                    <a href="#" class="block text-sm text-gray-600">Spices</a>
+                                    <a href="#" class="block text-sm text-gray-600">Tea</a>
+                                    <a href="#" class="block text-sm text-gray-600">Masks</a>
+                                    <a href="#" class="block text-sm text-gray-600">Gems</a>
+                                </div>
+                            </div>
+                            <a href="#" class="block text-gray-700 hover:text-primary">About Us</a>
+                            <a href="#" class="block text-gray-700 hover:text-primary">Artisan</a>
+                            <a href="#" class="block text-gray-700 hover:text-primary">Contact Us</a>
+                            <a href="#" class="block text-gray-700 hover:text-primary">Gift</a>
+                    </div>
                 </div>
             </div>
+        </nav>
 
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="lg:hidden hidden border-t">
-                <div class="py-4 space-y-4">
-                    <a href="#" class="block text-gray-700 hover:text-primary">Home</a>
-                    <div>
-                        <button onclick="toggleProductsMenu()" class="flex items-center justify-between w-full text-gray-700 hover:text-primary">
-                            Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path></svg>
-                        </button>
-                        <div id="mobileProductsMenu" class="hidden ml-4 mt-2 space-y-2">
-                            <a href="#" class="block text-sm text-gray-600">Traditional Art</a>
-                            <a href="#" class="block text-sm text-gray-600">Batik</a>
-                            <a href="#" class="block text-sm text-gray-600">Spices</a>
-                            <a href="#" class="block text-sm text-gray-600">Tea</a>
-                            <a href="#" class="block text-sm text-gray-600">Masks</a>
-                            <a href="#" class="block text-sm text-gray-600">Gems</a>
-                        </div>
-                    </div>
-                    <a href="#" class="block text-gray-700 hover:text-primary">About Us</a>
-                    <a href="#" class="block text-gray-700 hover:text-primary">Artisan</a>
-                    <a href="#" class="block text-gray-700 hover:text-primary">Contact Us</a>
-                    <a href="#" class="block text-gray-700 hover:text-primary">Gift</a>
-                </div>
-            </div>
-        </div>
         <script>
+            // Dropdown functionality for desktop
             document.addEventListener('DOMContentLoaded', function() {
-                const carousel = document.getElementById('product-carousel');
-                const prevBtn = document.getElementById('prev-btn');
-                const nextBtn = document.getElementById('next-btn');
-                const productWidth = document.querySelector('.md\\:w-1\\/3').offsetWidth;
-                let currentIndex = 0;
-                const totalProducts = 9;
-                const visibleProducts = 3;
+                // Desktop dropdowns
+                const dropdownBtns = document.querySelectorAll('.dropdown-btn');
                 
-                function updateCarousel() {
-                    const maxIndex = totalProducts - visibleProducts;
-                    if (currentIndex > maxIndex) currentIndex = 0;
-                    if (currentIndex < 0) currentIndex = maxIndex;
-                    
-                    const offset = -currentIndex * productWidth;
-                    carousel.style.transform = `translateX(${offset}px)`;
-                }
-                
-                nextBtn.addEventListener('click', function() {
-                    currentIndex++;
-                    if (currentIndex > totalProducts - visibleProducts) {
-                        currentIndex = 0;
-                    }
-                    updateCarousel();
+                dropdownBtns.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const dropdown = this.closest('.dropdown');
+                        const menu = dropdown.querySelector('.dropdown-menu');
+                        
+                        // Close all other dropdowns first
+                        document.querySelectorAll('.dropdown-menu').forEach(m => {
+                            if (m !== menu) m.classList.add('hidden');
+                        });
+                        
+                        // Toggle current dropdown
+                        menu.classList.toggle('hidden');
+                    });
                 });
                 
-                prevBtn.addEventListener('click', function() {
-                    currentIndex--;
-                    if (currentIndex < 0) {
-                        currentIndex = totalProducts - visibleProducts;
-                    }
-                    updateCarousel();
+                // Close dropdowns when clicking outside
+                document.addEventListener('click', function() {
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.classList.add('hidden');
+                    });
                 });
                 
-                // Auto-rotate every 5 seconds
-                setInterval(function() {
-                    currentIndex++;
-                    if (currentIndex > totalProducts - visibleProducts) {
-                        currentIndex = 0;
-                    }
-                    updateCarousel();
-                }, 5000);
+                // Mobile menu toggle
+                const mobileMenuButton = document.getElementById('mobileMenuButton');
+                const mobileMenu = document.getElementById('mobileMenu');
                 
-                // Initialize
-                updateCarousel();
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Mobile dropdown toggle
+                const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+                
+                mobileDropdownBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const menu = document.getElementById('mobileProductsMenu');
+                        menu.classList.toggle('hidden');
+                    });
+                });
+                
+                // Language change function
+                window.changeLang = function(lang) {
+                    document.getElementById('currentLang').textContent = lang;
+                    // Close the dropdown
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.classList.add('hidden');
+                    });
+                };
             });
         </script>
-    </nav>
 
     <!-- Hero Section -->
     <section class="hero-gradient text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-5xl font-bold mb-4">Discover Sri Lankan Heritage</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Authentic handcrafted products from the Pearl of the Indian Ocean. Each piece tells a story of tradition and artistry.</p>
-            <button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            <!--<button class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
                 Shop Now
-            </button>
+            </button>-->
         </div>
     </section>
 
     <!-- Traditional Art Section -->
-    <section id="traditional-art" class="category-section py-16">
+    <!-- Traditional Art Catalogue Section -->
+    <section id="traditional-art" class="py-16 bg-[#F2E6D8]">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-gray-800 mb-4">Traditional Art</h3>
-                <p class="text-gray-600 max-w-2xl mx-auto">Exquisite paintings and sculptures that capture the essence of Sri Lankan culture and spirituality</p>
+                <h3 class="text-4xl font-bold text-[#5E3023] mb-4">Traditional Art Collection</h3>
+                <p class="text-[#5E3023] max-w-2xl mx-auto">Exquisite paintings and sculptures that capture the essence of Sri Lankan culture and spirituality</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Traditional Painting" class="w-full h-64 object-cover">
+            
+            <!-- Filter Bar -->
+            <div class="mb-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-sm text-[#5E3023]">
+                    Showing <span class="font-semibold">12</span> of <span class="font-semibold">36</span> products
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <select class="appearance-none bg-white border border-[#5E3023] text-[#5E3023] py-2 pl-4 pr-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#007D7D]">
+                            <option>Sort by: Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest Arrivals</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#5E3023]">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex gap-2">
+                        <button class="p-2 text-[#5E3023] hover:text-[#CC3333]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </button>
+                        <button class="p-2 text-[#CC3333]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Buddha Lotus Painting" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <button class="p-2 bg-white rounded-full shadow-md hover:bg-[#FFCC00] transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#CC3333]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="absolute top-2 left-2 bg-[#CC3333] text-white text-xs font-semibold px-2 py-1 rounded">BESTSELLER</span>
+                    </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">Buddha Lotus Painting</h4>
-                        <p class="text-gray-600 mb-4">Hand-painted traditional artwork on canvas</p>
+                        <div class="flex items-center mb-1">
+                            <div class="flex text-[#FFCC00]">
+                                ★ ★ ★ ★ ★
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(24)</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-[#5E3023] mb-2">Buddha Lotus Painting</h4>
+                        <p class="text-gray-600 text-sm mb-4">Hand-painted traditional artwork on canvas using natural pigments</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-blue-600">$89.99</span>
-                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <div>
+                                <span class="text-2xl font-bold text-[#007D7D]">$89.99</span>
+                                <span class="text-sm text-gray-500 line-through ml-2">$120.00</span>
+                            </div>
+                            <button class="bg-[#007D7D] text-white px-4 py-2 rounded-lg hover:bg-[#006666] transition-colors flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
                                 Add to Cart
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1576398289164-c48dc021b4e1?w=400&h=300&fit=crop" alt="Wood Carving" class="w-full h-64 object-cover">
+
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576398289164-c48dc021b4e1?w=400&h=300&fit=crop" alt="Elephant Wood Carving" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <button class="p-2 bg-white rounded-full shadow-md hover:bg-[#FFCC00] transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">Elephant Wood Carving</h4>
-                        <p class="text-gray-600 mb-4">Handcrafted from teak wood</p>
+                        <div class="flex items-center mb-1">
+                            <div class="flex text-[#FFCC00]">
+                                ★ ★ ★ ★ ☆
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(18)</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-[#5E3023] mb-2">Elephant Wood Carving</h4>
+                        <p class="text-gray-600 text-sm mb-4">Handcrafted from sustainably sourced teak wood, 12" tall</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-blue-600">$124.99</span>
-                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <span class="text-2xl font-bold text-[#007D7D]">$124.99</span>
+                            <button class="bg-[#007D7D] text-white px-4 py-2 rounded-lg hover:bg-[#006666] transition-colors flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
                                 Add to Cart
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Temple Art" class="w-full h-64 object-cover">
+
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Temple Scene Canvas" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <button class="p-2 bg-white rounded-full shadow-md hover:bg-[#FFCC00] transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="absolute top-2 left-2 bg-[#339966] text-white text-xs font-semibold px-2 py-1 rounded">ECO-FRIENDLY</span>
+                    </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">Temple Scene Canvas</h4>
-                        <p class="text-gray-600 mb-4">Traditional Sri Lankan temple artwork</p>
+                        <div class="flex items-center mb-1">
+                            <div class="flex text-[#FFCC00]">
+                                ★ ★ ★ ★ ★
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(32)</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-[#5E3023] mb-2">Temple Scene Canvas</h4>
+                        <p class="text-gray-600 text-sm mb-4">Traditional Sri Lankan temple artwork with gold leaf details</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-blue-600">$67.99</span>
-                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            <span class="text-2xl font-bold text-[#007D7D]">$67.99</span>
+                            <button class="bg-[#007D7D] text-white px-4 py-2 rounded-lg hover:bg-[#006666] transition-colors flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
                                 Add to Cart
                             </button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Product Card 4 - Additional product to showcase 4-column layout -->
+                <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=300&fit=crop" alt="Traditional Mask" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2">
+                            <button class="p-2 bg-white rounded-full shadow-md hover:bg-[#FFCC00] transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="absolute top-2 left-2 bg-[#663399] text-white text-xs font-semibold px-2 py-1 rounded">NEW</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-1">
+                            <div class="flex text-[#FFCC00]">
+                                ★ ★ ★ ★ ☆
+                            </div>
+                            <span class="text-xs text-gray-500 ml-1">(9)</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-[#5E3023] mb-2">Kolam Mask</h4>
+                        <p class="text-gray-600 text-sm mb-4">Authentic Sri Lankan ceremonial mask, hand-carved and painted</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-[#007D7D]">$95.50</span>
+                            <button class="bg-[#007D7D] text-white px-4 py-2 rounded-lg hover:bg-[#006666] transition-colors flex items-center gap-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="flex items-center gap-1">
+                    <button class="px-3 py-1 rounded-lg text-[#5E3023] hover:bg-[#F2E6D8]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button class="px-4 py-2 bg-[#007D7D] text-white rounded-lg font-medium">1</button>
+                    <button class="px-4 py-2 text-[#5E3023] hover:bg-[#F2E6D8] rounded-lg font-medium">2</button>
+                    <button class="px-4 py-2 text-[#5E3023] hover:bg-[#F2E6D8] rounded-lg font-medium">3</button>
+                    <button class="px-4 py-2 text-[#5E3023] hover:bg-[#F2E6D8] rounded-lg font-medium">4</button>
+                    <button class="px-3 py-1 rounded-lg text-[#5E3023] hover:bg-[#F2E6D8]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </nav>
             </div>
         </div>
     </section>

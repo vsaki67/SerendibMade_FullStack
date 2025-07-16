@@ -15,6 +15,17 @@ Route::get('/loginpg', function () {
 Route::get('/productpage', function () {
     return view('productpage');
 });
+Route::get('/registrationform', function () {
+    return view('registrationform');
+});
+
+
+
+// Product routes
+Route::prefix('products')->group(function () {
+    Route::get('/', [ProductController::class, 'index'])->name('products.index');
+    Route::get('/{category}', [ProductController::class, 'category'])->name('products.category');
+});
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
